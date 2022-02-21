@@ -149,8 +149,8 @@
   export let dropdownClassName = undefined
   // adds the disabled tag to the HTML input
   export let disabled = false
-  // adds the required attribute to the HTML input
-  export let required = null
+  // remove the autocomplete-input class of the input
+  export let noInputStyles = false
 
   export let debug = false
 
@@ -999,7 +999,6 @@
       {name}
       {disabled}
       {title}
-      required={required}
       readonly={readonly || (lock && selectedItem)}
       tabindex={tabindex}
       bind:this={input}
