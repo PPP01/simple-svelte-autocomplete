@@ -134,6 +134,8 @@
   export let dropdownClassName = undefined
   // adds the disabled tag to the HTML input
   export let disabled = false
+  // adds the required attribute to the HTML input
+  export let required = null
 
   export let debug = false
 
@@ -962,6 +964,7 @@
       {name}
       {disabled}
       {title}
+      required={required}
       readonly={readonly || (lock && selectedItem)}
       bind:this={input}
       bind:value={text}
